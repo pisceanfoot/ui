@@ -7,11 +7,9 @@
 // </自动生成>
 //------------------------------------------------------------------------------
 
-namespace AdminUI.Master {
+namespace AdminUI.UserControls {
     
     
-    public partial class Main {
-        
-   
+    public partial class Navigation {
     }
 }

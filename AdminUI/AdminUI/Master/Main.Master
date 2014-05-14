@@ -1,20 +1,51 @@
 ﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="AdminUI.Master.Main" %>
 
-<!DOCTYPE html>
+<%@ Register src="../UserControls/PageHeader.ascx" tagname="PageHeader" tagprefix="uc1" %>
+<%@ Register src="../UserControls/Navigation.ascx" tagname="Navigation" tagprefix="uc1" %>
+<!doctype html>
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Web Application</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link href="http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
+        <!-- needs images, font... therefore can not be part of ui.css -->
+        <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+        <link rel="stylesheet" href="bower_components/weather-icons/css/weather-icons.min.css">
+        <!-- end needs images -->
 
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-    <title></title>
-    <asp:ContentPlaceHolder ID="head" runat="server">
-    </asp:ContentPlaceHolder>
-</head>
-<body>
-    <form id="form1" runat="server">
-    <div>
-        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
-        
-        </asp:ContentPlaceHolder>
-    </div>
-    </form>
-</body>
+            <link rel="stylesheet" href="styles/main.css">
+
+    </head>
+    <body data-ng-app="app" id="app" data-custom-background="" data-off-canvas-nav="">
+
+
+        <div data-ng-controller="AppCtrl">
+            <div data-ng-hide="isSpecificPage()" data-ng-cloak="" class="no-print">
+                
+                <div class="top-header">
+                <uc1:PageHeader ID="PageHeader1" runat="server" />
+                    </div>
+                <div id="nav-container">
+                    <uc1:Navigation ID="Navigation1" runat="server" />
+                </div>
+            </div>
+
+            <div class="view-container">
+                <div id="content" class="animate-fade-up"></div>
+            </div>
+        </div>
+
+
+        <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
+        <script src="scripts/vendor.js"></script>
+
+        <script src="scripts/ui.js"></script>
+
+        <script src="scripts/app.js"></script>
+    </body>
 </html>
+

@@ -49,16 +49,25 @@
     <Reference Include="System.Web.Mobile" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bootstrap\css\bootstrap-theme.css" />
+    <Content Include="bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="bootstrap\css\bootstrap.css" />
+    <Content Include="bootstrap\css\bootstrap.min.css" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bootstrap\js\bootstrap.js" />
+    <Content Include="bootstrap\js\bootstrap.min.js" />
     <Content Include="bower_components\font-awesome\css\font-awesome.min.css" />
+    <Content Include="bower_components\font-awesome\fonts\fontawesome-webfont.svg" />
     <Content Include="bower_components\weather-icons\css\weather-icons.min.css" />
     <Content Include="images\assets\600_400-1.jpg" />
     <Content Include="images\assets\600_400-2.jpg" />
     <Content Include="images\background\3.jpg" />
     <Content Include="images\g1.jpg" />
     <Content Include="Index.aspx" />
-    <Content Include="scripts\app.js" />
+    <Content Include="scripts\html5shiv.js" />
+    <Content Include="scripts\jquery.min.js" />
+    <Content Include="scripts\respond.min.js" />
     <Content Include="scripts\ui.js" />
-    <Content Include="scripts\vendor.js" />
     <Content Include="styles\img\checkmark.png" />
     <Content Include="styles\main.css" />
     <Content Include="styles\ui\images\flags-sda58b55ae6.png" />
@@ -89,13 +98,28 @@
     <Compile Include="UserControls\Navigation.ascx.designer.cs">
       <DependentUpon>Navigation.ascx</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\PageHeader.ascx.cs">
+      <DependentUpon>PageHeader.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PageHeader.ascx.designer.cs">
+      <DependentUpon>PageHeader.ascx</DependentUpon>
+    </Compile>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Folder Include="views\" />
+  </ItemGroup>
   <ItemGroup>
     <Content Include="bower_components\font-awesome\fonts\fontawesome-webfont.woff" />
     <Content Include="bower_components\weather-icons\font\weathericons-regular-webfont.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
     <Content Include="Master\Main.Master" />
+    <Content Include="bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="bootstrap\css\bootstrap.css.map" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bower_components\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="bower_components\font-awesome\fonts\fontawesome-webfont.ttf" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

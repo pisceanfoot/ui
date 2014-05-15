@@ -7,9 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace AdminUI {
+namespace AdminUI.UserControls {
     
     
-    public partial class Index {
+    public partial class PageHeader {
     }
 }

@@ -33,7 +33,7 @@
                     // fire
                     var parent = _this.parent('li');
                     if (parent.hasClass('active')) {
-                        return;
+                        //return;
                     }
 
                     var url = _this.attr('href');

@@ -17,7 +17,7 @@
             </div>
         </div>
 
-        <table class="table table-bordered table-striped table-responsive">
+        <table id="mytable" class="table table-bordered table-striped table-responsive">
             <thead>
                 <tr>
                     <th><div class="th">
@@ -44,58 +44,15 @@
             </thead>
             <tbody>
                 <tr>
-                    <td class="ng-binding">99 Ranch Market</td>
-                    <td class="ng-binding">$</td>
-                    <td class="ng-binding">181</td>
-                    <td class="ng-binding">3.4</td>
-                </tr><tr>
-                    <td class="ng-binding">Artisan Wine Depot</td>
-                    <td class="ng-binding">$$</td>
-                    <td class="ng-binding">26</td>
-                    <td class="ng-binding">4.1</td>
-                </tr><tr>
-                    <td class="ng-binding">Bumble Bee Health Foods</td>
-                    <td class="ng-binding">$$</td>
-                    <td class="ng-binding">43</td>
-                    <td class="ng-binding">4.3</td>
-                </tr><tr>
-                    <td class="ng-binding">Cost Plus World Market</td>
-                    <td class="ng-binding">$$</td>
-                    <td class="ng-binding">79</td>
-                    <td class="ng-binding">4</td>
-                </tr><tr>
-                    <td class="ng-binding">Costco</td>
-                    <td class="ng-binding">$$</td>
-                    <td class="ng-binding">219</td>
-                    <td class="ng-binding">3.6</td>
-                </tr><tr>
-                    <td class="ng-binding">Cucina Venti</td>
-                    <td class="ng-binding">$$</td>
-                    <td class="ng-binding">163</td>
-                    <td class="ng-binding">3.3</td>
-                </tr><tr>
-                    <td class="ng-binding">Dana Street Roasting</td>
-                    <td class="ng-binding">$</td>
-                    <td class="ng-binding">316</td>
-                    <td class="ng-binding">4.1</td>
-                </tr><tr>
-                    <td class="ng-binding">Eat On Monday Truck</td>
-                    <td class="ng-binding">$</td>
-                    <td class="ng-binding">119</td>
-                    <td class="ng-binding">4.3</td>
-                </tr><tr>
-                    <td class="ng-binding">Gochi Japanese Fusion Tapas</td>
-                    <td class="ng-binding">$$$</td>
-                    <td class="ng-binding">56</td>
-                    <td class="ng-binding">4.1</td>
-                </tr><tr>
-                    <td class="ng-binding">Hong Kong Chinese Bakery</td>
-                    <td class="ng-binding">$</td>
-                    <td class="ng-binding">182</td>
-                    <td class="ng-binding">3.4</td>
+                    <td>{{:name}}</td>
+                    <td>{{:name}}</td>
+                    <td><a href="{{:url}}">{{:name}}</a></td>
+                    <td>3.4</td>
                 </tr>
             </tbody>
         </table>
+
+        
 
         <div class="table-footer">
             <div class="row">
@@ -115,3 +72,7 @@
         </div>
     </div>
 </div>
+<script>
+    var data = [{ name: 2, url:'http://www.baidu.com' }];
+    $('#mytable').grid().link(data);
+</script>

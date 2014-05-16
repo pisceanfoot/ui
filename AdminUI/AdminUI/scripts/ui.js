@@ -2,13 +2,22 @@
     var navi = {
         id: '#nav',
         view: '#content',
-        init: function () {
+        miniId: '.toggle-min',
+        init: function (option) {
+            navi.navigation();
+            navi.mini();
+        },
+        navigation: function(){
             var a = $(navi.id + " a");
             a.click(function () {
                 var _this = $(this);
                 var collapse = _this.parent('li');
                 var ul = collapse.find('ul');
                 if (ul.length) {
+                    if ($('body').hasClass('nav-min')) {
+                        return;
+                    }
+
                     if (collapse.hasClass('open')) {
                         collapse.removeClass("open").find(">ul").slideUp();
                     } else {
@@ -28,17 +37,30 @@
 
                     var url = _this.attr('href');
                     url = url.substring(1);
-                    url = '/views' + url + '.html';
+                    url = 'views' + url + '.html';
 
-                    var allli = parent.parent('ul').parent('li');
-                    var allOther = parent.parent('ul').parent('li').parent('ul').find('li');
-                    allOther.removeClass('active');
+                    $(navi.id).find('li').removeClass('active');
+
+                    var parentli = parent.parent('ul').parent('li');
+                    parentli.toggleClass('active');
                     parent.toggleClass('active');
+                    
+                    parent.parent('ul').find('>li').removeClass('open').find('>ul').slideUp();
 
                     $.get(url, function (html) {
                         $(navi.view).html(html);
                     });
                 }
+            });
+        },
+        mini: function () {
+
+            $(navi.miniId).click(function () {
+                $('body').toggleClass('nav-min');
+
+                var _navi = $(navi.id);
+                _navi.find('li[class*=open]').find('ul').hide();
+                _navi.find('>li').removeClass('open');
             });
         }
     }

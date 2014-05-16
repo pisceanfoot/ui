@@ -22,6 +22,7 @@
                 <li><a href="#/ui/timeline"><i class="fa fa-caret-right"></i><span>Timeline</span></a></li>
                 <li><a href="#/ui/nested-lists"><i class="fa fa-caret-right"></i><span>Nested Lists</span></a></li>
                 <li><a href="#/ui/pricing-tables"><i class="fa fa-caret-right"></i><span>Pricing Tables</span></a></li>
+                <li><a href="#/ui/Fee"><i class="fa fa-caret-right"></i><span>Fee</span></a></li>
             </ul>
         </li>
         <li>

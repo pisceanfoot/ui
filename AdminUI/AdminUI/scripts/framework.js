@@ -258,18 +258,23 @@
     };
 
     /*
+    * http://www.jsviews.com/
     * @description use jquery template for table
     * @param {object} option
     * @example
     *   <table id="grid">
+    *      <thead>
     *       <tr>
     *           <td>ID</td>
     *           <td>Name</td>
     *       </tr>
+    *      </thead>
+    *      <tbody>
     *       <tr>
     *           <td>${ID}</td>
     *           <td>${Name}</td>
     *       </tr>
+    *      </tobdy>
     *   </table>
     * <script>
     *    $("#grid").grid().load({ID:1, Name:'name'});
@@ -472,15 +477,14 @@
             debug_console(option);
 
             var _this = $(this);
-            var rel = _this.attr('rel');
-            rel = rel.replace('ajaxAction_', "");
-            if (!rel) {
-                rel = rel.attr('control');
+            var control = _this.attr('control');
+            if (!control) {
+                var rel = _this.attr('rel');
+                control = rel.replace('ajaxAction_', "");
             }
 
-            var data = $.serializeControl(rel);
+            var data = $.serializeControl(control);
             var name = _this.attr("name");
-
             var url = _this.attr("href");
 
             function ajaxActionCallback(result) {
@@ -516,7 +520,6 @@
 
             $.framework.ajaxPost("relAction_ajaxAction" + url, url, data, ajaxActionCallback, 'json');
         }
-
 
         $('body').on('click', 'a[rel^=ajaxAction]', function (event) { ajaxAction.call(event.currentTarget, option); event.preventDefault(); });
 

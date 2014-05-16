@@ -5,7 +5,7 @@
     <div class="logo">
         <a href="#/">
             <!-- <span class="logo-icon glyphicon glyphicon-fire"></span> -->
-            <span class="ng-binding">Squardddde</span>
+            <span class="ng-binding">Square</span>
         </a>
     </div>
 

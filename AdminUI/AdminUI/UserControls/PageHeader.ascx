@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="PageHeader.ascx.cs" Inherits="AdminUI.UserControls.PageHeader" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="PageHeader.ascx.cs" Inherits="AdminUI.UserControls.PageHeader" %>
 <div id="header" class="top-header">
 <div class="clearfix">
     <!-- Logo -->

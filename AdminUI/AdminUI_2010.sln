@@ -1,0 +1,57 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AdminUI", "AdminUI", "{7BB0A4FE-064F-4D64-B1ED-FB5C96968FC0}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/AdminUI"
+		Debug.AspNetCompiler.PhysicalPath = "AdminUI\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\AdminUI\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/AdminUI"
+		Release.AspNetCompiler.PhysicalPath = "AdminUI\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\AdminUI\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "38717"
+	EndProjectSection
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "dist-v1.2", "..\dist-v1.2", "{95305AAB-2E83-4107-B487-F419C001BF59}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
+		Debug.AspNetCompiler.VirtualPath = "/dist-v1.2"
+		Debug.AspNetCompiler.PhysicalPath = "..\dist-v1.2\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\dist-v1.2\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/dist-v1.2"
+		Release.AspNetCompiler.PhysicalPath = "..\dist-v1.2\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\dist-v1.2\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "60488"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7BB0A4FE-064F-4D64-B1ED-FB5C96968FC0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7BB0A4FE-064F-4D64-B1ED-FB5C96968FC0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95305AAB-2E83-4107-B487-F419C001BF59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95305AAB-2E83-4107-B487-F419C001BF59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

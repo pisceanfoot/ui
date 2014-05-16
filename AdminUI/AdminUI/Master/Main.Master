@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Main.master.cs" Inherits="AdminUI.Master.Main" %>
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="AdminUI.Master.Main" %>
 <%@ Register src="../UserControls/PageHeader.ascx" tagname="PageHeader" tagprefix="uc1" %>
 <%@ Register src="../UserControls/Navigation.ascx" tagname="Navigation" tagprefix="uc1" %>
 <!DOCTYPE html>

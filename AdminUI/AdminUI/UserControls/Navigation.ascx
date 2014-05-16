@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Navigation.ascx.cs" Inherits="AdminUI.UserControls.Navigation" %>
+﻿<%@ Control Language="C#" AutoEventWireup="true" CodeFile="Navigation.ascx.cs" Inherits="AdminUI.UserControls.Navigation" %>
 <div id="nav-container">
 <div id="nav-wrapper">
     <ul id="nav">

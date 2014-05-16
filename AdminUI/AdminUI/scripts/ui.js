@@ -3,6 +3,7 @@
         id: '#nav',
         view: '#content',
         miniId: '.toggle-min',
+        menuButton: '.menu-button',
         init: function (option) {
             navi.navigation();
             navi.mini();
@@ -61,6 +62,10 @@
                 var _navi = $(navi.id);
                 _navi.find('li[class*=open]').find('ul').hide();
                 _navi.find('>li').removeClass('open');
+            });
+
+            $(navi.menuButton).click(function(){
+                $('body').toggleClass('on-canvas');
             });
         }
     }

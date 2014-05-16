@@ -4,6 +4,13 @@
     <ul id="nav">
         <li><a href="#/dashboard"> <i class="fa fa-dashboard"></i><span>Dashboard</span> </a></li>
         <li>
+            <a href="#/my"><i class="glyphicon glyphicon-random"></i><span>My</span></a>
+            <ul>
+                <li><a href="#/ui/my/list"><i class="fa fa-caret-right"></i><span>list</span></a></li>
+                <li><a href="#/ui/my/detail"><i class="fa fa-caret-right"></i><span>detail</span></a></li>
+            </ul>
+        </li>
+        <li>
             <a href="#/ui"><i class="fa fa-magic"></i><span>UI Kit</span></a>
             <ul>
                 <li><a href="#/ui/buttons"><i class="fa fa-caret-right"></i><span>Buttons</span></a></li>

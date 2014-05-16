@@ -1,0 +1,117 @@
+﻿<div class="page page-table ng-scope">
+    <div class="panel panel-default table-dynamic">
+        <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> Bordered table</strong></div>
+
+        <div class="table-filters">
+            <div class="row">
+                <div class="col-sm-4 col-xs-6">
+                    <form class="ng-pristine ng-valid">
+                        <input type="text" placeholder="search" class="form-control ng-pristine ng-valid" data-ng-model="searchKeywords" data-ng-keyup="search()">
+                    </form>
+                </div>
+                <div class="col-sm-3 col-xs-6 filter-result-info">
+                    <span class="ng-binding">
+                        Showing 25/25 entries
+                    </span>              
+                </div>
+            </div>
+        </div>
+
+        <table class="table table-bordered table-striped table-responsive">
+            <thead>
+                <tr>
+                    <th><div class="th">
+                        Store Name
+                        <span class="glyphicon glyphicon-chevron-up active"></span>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </div></th>
+                    <th><div class="th">
+                        Price
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </div></th>
+                    <th><div class="th">
+                        Sales (in 30 days)
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </div></th>
+                    <th><div class="th">
+                        Rating
+                        <span class="glyphicon glyphicon-chevron-up"></span>
+                        <span class="glyphicon glyphicon-chevron-down"></span>
+                    </div></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="ng-binding">99 Ranch Market</td>
+                    <td class="ng-binding">$</td>
+                    <td class="ng-binding">181</td>
+                    <td class="ng-binding">3.4</td>
+                </tr><tr>
+                    <td class="ng-binding">Artisan Wine Depot</td>
+                    <td class="ng-binding">$$</td>
+                    <td class="ng-binding">26</td>
+                    <td class="ng-binding">4.1</td>
+                </tr><tr>
+                    <td class="ng-binding">Bumble Bee Health Foods</td>
+                    <td class="ng-binding">$$</td>
+                    <td class="ng-binding">43</td>
+                    <td class="ng-binding">4.3</td>
+                </tr><tr>
+                    <td class="ng-binding">Cost Plus World Market</td>
+                    <td class="ng-binding">$$</td>
+                    <td class="ng-binding">79</td>
+                    <td class="ng-binding">4</td>
+                </tr><tr>
+                    <td class="ng-binding">Costco</td>
+                    <td class="ng-binding">$$</td>
+                    <td class="ng-binding">219</td>
+                    <td class="ng-binding">3.6</td>
+                </tr><tr>
+                    <td class="ng-binding">Cucina Venti</td>
+                    <td class="ng-binding">$$</td>
+                    <td class="ng-binding">163</td>
+                    <td class="ng-binding">3.3</td>
+                </tr><tr>
+                    <td class="ng-binding">Dana Street Roasting</td>
+                    <td class="ng-binding">$</td>
+                    <td class="ng-binding">316</td>
+                    <td class="ng-binding">4.1</td>
+                </tr><tr>
+                    <td class="ng-binding">Eat On Monday Truck</td>
+                    <td class="ng-binding">$</td>
+                    <td class="ng-binding">119</td>
+                    <td class="ng-binding">4.3</td>
+                </tr><tr>
+                    <td class="ng-binding">Gochi Japanese Fusion Tapas</td>
+                    <td class="ng-binding">$$$</td>
+                    <td class="ng-binding">56</td>
+                    <td class="ng-binding">4.1</td>
+                </tr><tr>
+                    <td class="ng-binding">Hong Kong Chinese Bakery</td>
+                    <td class="ng-binding">$</td>
+                    <td class="ng-binding">182</td>
+                    <td class="ng-binding">3.4</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <div class="table-footer">
+            <div class="row">
+                <div class="col-md-6 page-num-info">
+                    <span>
+                        Show 
+                        <select data-ng-model="numPerPage" data-ng-options="num for num in numPerPageOpt" data-ng-change="onNumPerPageChange()" class="ng-pristine ng-valid"><option value="0">3</option><option value="1">5</option><option value="2" selected="selected">10</option><option value="3">20</option></select> 
+                        entries per page
+                    </span>
+                </div>
+                <div class="col-md-6 text-right pagination-container">
+                    <ul class="pagination-sm pagination ng-isolate-scope" page="currentPage" total-items="filteredStores.length" max-size="4" on-select-page="select(page)" items-per-page="numPerPage" rotate="false" boundary-links="true">
+  <!-- ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope disabled"><a ng-click="selectPage(page.number)" class="ng-binding">First</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope disabled"><a ng-click="selectPage(page.number)" class="ng-binding">Previous</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope active"><a ng-click="selectPage(page.number)" class="ng-binding">1</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">2</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">3</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">Next</a></li><!-- end ngRepeat: page in pages --><li ng-repeat="page in pages" ng-class="{active: page.active, disabled: page.disabled}" class="ng-scope"><a ng-click="selectPage(page.number)" class="ng-binding">Last</a></li><!-- end ngRepeat: page in pages -->
+</ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

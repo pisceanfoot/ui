@@ -9,3 +9,4 @@
 *.pdsync
 TestResults.*
 /TestResults/*.trx
+bower_components/

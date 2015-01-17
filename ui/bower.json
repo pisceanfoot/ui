@@ -1,0 +1,19 @@
+{
+  "name": "ui",
+  "version": "0.0.0",
+  "homepage": "https://github.com/pisceanfoot/ui",
+  "authors": [
+    "Leo <pisceanfoot@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "bootstrap": "~3.3.1"
+  }
+}

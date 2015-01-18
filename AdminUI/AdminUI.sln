@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "dist-v1.2", "..\dist-v1.2\", "{AE030D5D-C58C-46CB-A5B3-D3E0A2216303}"
 	ProjectSection(WebsiteProperties) = preProject
 		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.0"
@@ -19,6 +21,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "dist-v1.2", "..\dist-v1.2\"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "60488"
+		SlnRelativePath = "..\dist-v1.2\"
 	EndProjectSection
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AdminUI", "AdminUI\", "{71075469-E5F1-4BED-83E1-4CDBB30D5CE9}"
@@ -39,7 +42,10 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "AdminUI", "AdminUI\", "{710
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
 		VWDPort = "38677"
+		SlnRelativePath = "AdminUI\"
 	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kate.UI", "Kate.UI\Kate.UI.csproj", "{CEB0CA29-8365-4C8A-B706-6E8B15501C17}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -55,6 +61,10 @@ Global
 		{71075469-E5F1-4BED-83E1-4CDBB30D5CE9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{71075469-E5F1-4BED-83E1-4CDBB30D5CE9}.Release|Any CPU.ActiveCfg = Debug|Any CPU
 		{71075469-E5F1-4BED-83E1-4CDBB30D5CE9}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{CEB0CA29-8365-4C8A-B706-6E8B15501C17}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEB0CA29-8365-4C8A-B706-6E8B15501C17}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEB0CA29-8365-4C8A-B706-6E8B15501C17}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEB0CA29-8365-4C8A-B706-6E8B15501C17}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

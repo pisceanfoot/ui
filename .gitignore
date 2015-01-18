@@ -10,3 +10,4 @@
 TestResults.*
 /TestResults/*.trx
 bower_components/
+packages/

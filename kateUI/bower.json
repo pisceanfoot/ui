@@ -1,0 +1,14 @@
+{
+  "name": "Bella.CMS.UI",
+  "description": "cms",
+  "version": "1.0.0",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "1.2.x",
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.1.1",
+    "angular-route": "1.2.x",
+    "angular-bootstrap": "~0.12.0"
+  }
+}

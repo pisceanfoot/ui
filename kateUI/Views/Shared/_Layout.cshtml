@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html lang="en" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap -->
+
+    <link href="@Url.Content("~/Resources/bootstrap/dist/css/bootstrap.min.css")" rel="stylesheet"/>
+    <link href="@Url.Content("~/Styles/font-awesome/css/font-awesome.min.css")" rel="stylesheet" />
+    <link href="@Url.Content("~/Styles/weather-icons/css/weather-icons.min.css")" rel="stylesheet"  />
+    <link href="@Url.Content("~/Styles/main.css")" rel="stylesheet"/>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="@Url.Content("~/Scripts/html5shiv.js")"></script>
+      <script src="@Url.Content("~/Scripts/respond.min.js")"></script>
+    <![endif]-->
+</head>
+<body>
+    <div class="no-print">
+        @Html.Partial("_PageHeaderPartial")
+        @Html.Partial("_NavigationPartial")
+    </div>
+
+    <div class="view-container">
+        <div id="content">
+            @RenderBody()
+        </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="@Url.Content("~/Resources/jquery/dist/jquery.min.js")"></script>
+    <script src="@Url.Content("~/Resources/bootstrap/dist/js/bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Resources/angular/angular.min.js")"></script>
+    <script src="@Url.Content("~/Resources/angular-route/angular-route.min.js")"></script>
+    <script src="@Url.Content("~/Resources/angular-bootstrap/ui-bootstrap.min.js")"></script>
+    <script src="@Url.Content("~/Resources/angular-bootstrap/ui-bootstrap-tpls.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/navigation.js")"></script>
+    <script src="@Url.Content("~/Scripts/bootstrapExtend.js")"></script>
+    @RenderSection("Javascript", false)
+</body>
+</html>

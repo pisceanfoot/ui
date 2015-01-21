@@ -1,0 +1,83 @@
+﻿<div class="panel panel-default table-dynamic">
+    <div class="panel-heading"><strong><span class="glyphicon glyphicon-search"></span></strong></div>
+
+    <div class="table-filters">
+        <div class="row form-group">
+            <div class="col-sm-4">
+                <label for="btnPlatform">Course Name:</label>
+                <input type="text" placeholder="Search by Course Name" class="form-control" ng-model="filters.CourseName">
+            </div>
+        </div>
+    </div>
+
+    <div class="panel-heading"><strong><span class="glyphicon glyphicon-th"></span> </strong></div>
+   
+    <table id="mytable" class="table table-bordered table-striped table-responsive">
+        <thead>
+            <tr>
+                <th>
+                    <div class="th">
+                        Course ID
+                    </div>
+                </th>
+                <th>
+                    <div class="th">
+                        Course Name
+                    </div>
+                </th>
+                <th>
+                    <div class="th">
+                        Src Culture (TODO: RENAME)
+                    </div>
+                </th>
+                <th>
+                    <div class="th">
+                        Tar Culture (TODO: RENAME)
+                    </div>
+                </th>
+                <th>
+                    <div class="th">
+                        Platform
+                    </div>
+                </th>
+                <th>
+                    <div class="th">
+                        Update Date
+                    </div>
+                </th>
+                <th>
+                    <div class="th">
+                        Update By
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="course in courseList | filter:filters">
+                <td><a href="#list/{{course.CourseID}}">{{course.CourseID}}</a></td>
+                <td>{{course.CourseName}}</td>
+                <td>{{course.SrcCulture}}</td>
+                <td>{{course.TarCulture}}</td>
+                <td>{{course.System}}</td>
+                <td>{{course.UpdateDate}}</td>
+                <td>{{course.UpdateBy}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <div class="table-footer">
+        <div class="row">
+            <div class="col-md-6 text-right pagination-container">
+                <ul class="pagination-sm pagination">
+                    <li class="disabled"><a>First</a></li>
+                    <li class="disabled"><a>Previous</a></li>
+                    <li class="active"><a>1</a></li>
+                    <li><a>2</a></li>
+                    <li><a>3</a></li>
+                    <li><a>Next</a></li>
+                    <li><a>Last</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

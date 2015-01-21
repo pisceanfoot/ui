@@ -1,0 +1,10 @@
+﻿@using System.Collections.Generic;
+@using EFSchools.Englishtown.Bella.CMS.Web.Interface.Course;
+@model List<CourseResult>
+
+
+
+@foreach (var genre in Model)
+{
+    <li>@genre.CourseName</li>
+}

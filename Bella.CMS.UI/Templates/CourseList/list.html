@@ -1,0 +1,64 @@
+﻿<div class="panel panel-default table-dynamic">
+    <div class="panel-heading">
+        <div class="row">
+            <div class="col-sm-2" style="margin-top:8px;"><strong>Course List</strong></div>
+            <div class="col-sm-10"><input type="text" placeholder="Search by Course Name" class="form-control" ng-model="filters.CourseName"></div>
+        </div>
+        
+    </div>
+
+    <table id="mytable" class="table table-bordered table-striped table-responsive">
+        <thead>
+            <tr>
+                <th>
+                    <div class="th">
+                        Course ID
+                    </div>
+                </th>
+                <th>
+                    <div class="th">
+                        Course Name
+                    </div>
+                </th>
+                <th>
+                    <div class="th">
+                        Language
+                    </div>
+                </th>
+                <th>
+                    <div class="th">
+                        Culture
+                    </div>
+                </th>
+                <th>
+                    <div class="th">
+                        Platform
+                    </div>
+                </th>
+                <th>
+                    <div class="th">
+                        Update Date
+                    </div>
+                </th>
+                <th>
+                    <div class="th">
+                        Update By
+                    </div>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="course in courseList | filter:filters">
+                <td><div style="text-decoration:underline;"><a href="#list/{{course.CourseID}}">{{course.CourseID}}</a></div></td>
+                <td>{{course.CourseName}}</td>
+                <td>{{course.TarCulture}}</td>
+                <td>{{course.SrcCulture}}</td>
+                <td>{{course.System}}</td>
+                <td>{{course.UpdateDate}}</td>
+                <td>{{course.UpdateBy}}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    
+</div>

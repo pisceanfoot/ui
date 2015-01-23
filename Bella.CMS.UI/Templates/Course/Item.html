@@ -1,0 +1,267 @@
+﻿<div class="panel panel-default">
+    
+    <div class="panel-heading">
+        <a href="{{goBack}}" class="btn btn-info btn-direction btn-left">Go Back</a>
+        <strong>Course Detail</strong>
+
+    </div>
+    <div class="panel-body">
+        <form class="panel-body ng-pristine ng-valid">
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <label for="" >Course ID</label>
+                        <div>
+                            <input type="text" disabled ng-model="courseDetail.CourseID" class="form-control"/>
+                        </div>
+                    </div>
+                     <div class="col-sm-4">
+                        <label for="" >Course Name</label>
+                        <div>
+                            <input type="text" ng-model="courseDetail.CourseName" class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="" >Version</label>
+                        <div>
+                            <input type="text" ng-model="courseDetail.Version" disabled class="form-control"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+               <div class="row">
+                    <div class="col-sm-4">
+                        <label for="" >Language</label>
+                        <div>
+                            <input type="text" ng-model="courseDetail.TarCulture" disabled class="form-control"/>
+                        </div>
+                    </div>
+                     <div class="col-sm-4">
+                        <label for="" >Cultrue</label>
+                        <div>
+                            <input type="text" ng-model="courseDetail.SrcCulture" disabled class="form-control"/>
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <label for="" >System</label>
+                        <div>
+                            <input type="text" ng-model="courseDetail.System" disabled class="form-control"/>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <hr />
+            <div class="form-group">
+                <tabset justified="true">
+                    <tab heading="Chunk"><div ng-include src="'chunkForm'"></div></tab>
+                    <tab heading="Presentation"><ng-include src="'presentationForm'"></ng-include></tab>
+                    <tab heading="Multi Choice"><ng-include src="'multiChoiceForm'"></ng-include></tab>
+                </tabset>
+            </div>
+        </form>
+   </div>
+
+    <div class="panel-footer">
+        <a href="javascript:void(0)" class="btn btn-info" ng-click="edit();">Edit</a>
+        <a href="javascript:void(0)" class="btn btn-info" ng-click="submit();">Submit</a>
+        <a href="javascript:void(0)" class="btn btn-info">Preview</a>
+        <a href="javascript:void(0)" class="btn btn-danger">Approve</a>
+    </div>
+</div>
+
+
+<script type="text/ng-template" id="chunkForm">
+<div class="divider"></div>
+<div class="panel panel-default">
+    <div class="panel-heading">Chunk</div>
+    <div class="panel-body">
+        <div>
+            <input type="text" ng-model="CourseData.chunk.chunk" class="form-control"/>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Definition</div>
+    <div class="panel-body">
+        <div>
+            <input type="text" ng-model="CourseData.chunk.definition" class="form-control"/>
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Detail</div>
+    <div class="panel-body">
+        <div class="panel panel-default" ng-repeat="detail in CourseData.chunk.details">
+            <div class="panel-heading hand" ng-click="isCollapsed = !isCollapsed">#{{$index+1}}</div>
+            <div class="panel-body" collapse="!isCollapsed">
+    	        <label for="" >Title</label>
+	            <div>
+                    <input type="text" class="form-control" ng-model="detail.title"/>
+	            </div>
+    	        <label for="" >Content</label>
+	            <div>
+                    <textarea class="form-control" rows="5" ng-model="detail.content"></textarea>
+	            </div>
+            </div>
+        </div>
+        <button type="button" class="btn btn-primary btn-xs" ng-click="addChunk()"><i class="fa fa-plus"></i> New</button>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Audio<input id="chunkAudioFileUpLoad" type="file" style="position:absolute; top:-1000px;" input-Change="CourseData.chunk.audio" nv-file-select="" filters="customExtFilter" uploader="uploader" /><button style="margin-left:5px;" class="btn btn-primary btn-xs" ng-click="triggerUpload('chunkAudioFileUpLoad')"><span class="glyphicon glyphicon-upload"></span> Upload</button></div>
+    <div class="panel-body">
+        <div>
+            <input type="text" ng-model="CourseData.chunk.audio" disabled class="form-control">
+        </div>
+    </div>
+</div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">Pronounce</div>
+    <div class="panel-body">
+        <div>
+            <input type="text" ng-model="CourseData.chunk.pronounce" class="form-control"/>
+        </div>
+    </div>
+</div>
+
+    
+<div class="panel panel-default">
+    <div class="panel-heading">Balloon Error Words</div>
+    <div class="panel-body">
+        <div>
+            <input type="text" ng-model="CourseData.chunk['balloon-error-words']" class="form-control"/>
+        </div>
+    </div>
+</div>
+    
+</script>
+
+<script type="text/ng-template" id="presentationForm">
+<div class="divider"></div>
+
+<div class="panel panel-default">
+    <div class="panel-heading">audio</div>
+    <div class="panel-body">
+        <input type="text" class="form-control" ng-model="CourseData.presentation.audio">
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">score</div>
+    <div class="panel-body">
+        <input type="text" class="form-control" ng-model="CourseData.presentation.score">
+    </div>
+</div>
+<div class="panel panel-default">
+    <div class="panel-heading">dialogue</div>
+    <div class="panel-body">
+    
+        <div class="form-group row" ng-repeat="d in CourseData.presentation.dialogue">
+            <div class="col-sm-8">
+                <input type="text" class="form-control" placeholder="content" ng-model="d.content">
+            </div>
+            <div class="col-sm-4">
+                <input type="text" class="form-control" placeholder="speakericon" ng-model="d.speakericon">
+            </div>
+        </div>
+
+        <div class="form-group">
+            <button type="button" class="btn btn-primary btn-xs" ng-click="addDialogue()"><i class="fa fa-plus"></i> New Dialogue</button>
+        </div>
+    </div>
+</div>
+</script>
+
+<script type="text/ng-template" id="multiChoiceForm">
+<div class="divider"></div>
+
+<div class="panel panel-default" ng-repeat="d in CourseData['multi-choice']">
+    <div class="panel-heading hand" ng-click="isCollapsed = !isCollapsed">#{{$index + 1}} Question</div>
+    <div class="panel-body" collapse="!isCollapsed">
+        <p>
+    	    <label for="" >question</label>
+	        <div>
+		        <input type="text" class="form-control" ng-model="d.question">
+	        </div>
+        </p>
+        <p>
+    	    <label for="" >header</label>
+	        <div>
+		        <input type="text" class="form-control" ng-model="d.header">
+	        </div>
+        </p>
+        <p>
+    	    <label for="" >audio</label>
+	        <div>
+		        <input type="text" class="form-control" ng-model="d.audio">
+	        </div>
+        </p>
+        <p>
+    	    <label for="" >multi-choice-type</label>
+	        <div>
+                <select class="form-control" ng-model="d['multi-choice-type']" custom-trim>
+                    <option value="Form">Form</option>
+                    <option value="Meaning">Meaning</option>
+                    <option value="Use">Use</option>
+                </select>
+	        </div>
+        </p>
+        <p>
+    	    <label for="" >score</label>
+	        <div>
+		        <input type="text" class="form-control" ng-model="d.score">
+	        </div>
+        </p>
+        <p>
+    	    <label for="" >random</label>
+	        <div>
+                <select class="form-control" ng-model="d.random" custom-to-lower-case custom-trim>
+                    <option value="y">Yes</option>
+                    <option value="n">No</option>
+                </select>
+	        </div>
+        </p>
+        <p>
+            <div>
+    	        <label for="" >items</label>
+            </div>
+            <div class="panel panel-default" ng-repeat="e in d.items">
+                <div class="panel-heading hand" ng-click="isCollapsed2 = !isCollapsed2">#{{$index + 1}} Option</div>
+                <div class="panel-body" collapse="!isCollapsed2">
+                    <p>
+    	                <label for="" >item</label>
+	                    <div>
+		                    <input type="text" class="form-control" ng-model="e.item">
+	                    </div>
+                    </p>
+                    <p>
+    	                <label for="" >iscorrect</label>
+	                    <div>
+                            <select class="form-control" ng-model="e.iscorrect" custom-to-lower-case custom-trim>
+                                <option value="y">Yes</option>
+                                <option value="n">No</option>
+                            </select>
+	                    </div>
+                    </p>
+                    <p>
+    	                <label for="" >errorhint</label>
+	                    <div>
+		                    <input type="text" class="form-control" ng-model="e.errorhint">
+	                    </div>
+                    </p>
+                        
+                        
+                </div>
+            </div>
+            <button type="button" class="btn btn-primary btn-xs" ng-click="addOption(d)"><i class="fa fa-plus"></i> New Option</button>
+        </p>
+    </div>
+</div>
+<button type="button" class="btn btn-primary btn-xs" ng-click="addQuestion()"><i class="fa fa-plus"></i> New Question</button>
+
+
+</script>

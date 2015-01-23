@@ -1,0 +1,15 @@
+﻿@{
+    ViewBag.Title = "Course - CMS";
+}
+
+<div class="page" ng-view>
+    
+</div>
+
+
+@section Javascript{
+    <script src="@Url.Content("~/Resources/es5-shim/es5-shim.min.js")"></script>
+    <script src="@Url.Content("~/Resources/es5-shim/es5-sham.min.js")"></script>
+    <script src="@Url.Content("~/Resources/angular-file-upload/angular-file-upload.min.js")"></script>
+    <script src="@Url.Content("~/Scripts/Controllers/Course.js")"></script>
+}

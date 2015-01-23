@@ -1,0 +1,46 @@
+﻿<div class="panel panel-default">
+    <div class="panel-heading"><strong>Create New</strong></div>
+    <div class="panel-body">
+        
+        <div class="form-group">
+            <div class="row">
+                <div class="col-sm-4">
+                    <label for="" >Language</label>
+                    <div>                        
+                        <select class="form-control" ng-model="targetLanguage">
+                            <option value="en">English</option>
+                        </select>
+                    </div>
+                </div>
+                    <div class="col-sm-4">
+                    <label for="" >Cultrue</label>
+                    <div>            
+                        <select class="form-control" ng-model="sourceLanguage">
+                            <option value="en">English</option>
+                            <option value="zh-cn">Chinese</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4">
+                    <label for="" >System</label>
+                    <div>
+                        <select class="form-control" ng-model="system">
+                            <option value="android">Android</option>
+                            <option value="ios">iOS</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+
+    </div>
+
+    <div class="panel-footer">
+        <a href="javascript:void(0)" class="btn btn-info" ng-click="next();">Next</a>
+    </div>
+
+
+</div>
+
